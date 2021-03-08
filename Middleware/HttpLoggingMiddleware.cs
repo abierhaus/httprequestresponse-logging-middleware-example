@@ -5,18 +5,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
-namespace httpresponse_middleware_example.Middleware
+namespace httprequestresponse_logging_middleware_example.Middleware
 {
     /// <summary>
     /// Middleware for Logging Request and Responses.
     /// Remarks: Original code taken from https://exceptionnotfound.net/using-middleware-to-log-requests-and-responses-in-asp-net-core/
     /// </summary>
-    public class ApiResponseLoggingMiddleware
+    public class HttpLoggingMiddleware
     {
         private readonly ILogger _logger;
         private readonly RequestDelegate _next;
 
-        public ApiResponseLoggingMiddleware(RequestDelegate next, ILogger<ApiResponseLoggingMiddleware> logger)
+        public HttpLoggingMiddleware(RequestDelegate next, ILogger<HttpLoggingMiddleware> logger)
         {
             _next = next;
             _logger = logger;

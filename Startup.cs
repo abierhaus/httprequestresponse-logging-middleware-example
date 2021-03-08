@@ -1,4 +1,4 @@
-using httpresponse_middleware_example.Middleware;
+using httprequestresponse_logging_middleware_example.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,7 +23,7 @@ namespace httpresponse_middleware_example
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "httpget_middleware_example", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "httprequestresponse_logging_middleware_example", Version = "v1"});
             });
         }
 
@@ -34,7 +34,7 @@ namespace httpresponse_middleware_example
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "httpget_middleware_example v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "httprequestresponse_logging_middleware_example v1"));
             }
 
 
@@ -45,7 +45,7 @@ namespace httpresponse_middleware_example
             app.UseAuthorization();
 
             //Add our new middleware to the pipeline
-            app.UseMiddleware<ApiResponseLoggingMiddleware>();
+            app.UseMiddleware<HttpLoggingMiddleware>();
 
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });

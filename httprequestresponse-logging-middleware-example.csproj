@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>httpget_middleware_example</RootNamespace>
+    <RootNamespace>httprequestresponse-logging-middleware-example</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

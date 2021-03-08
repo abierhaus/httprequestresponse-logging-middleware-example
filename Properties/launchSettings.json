@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "httpget_middleware_example": {
+    "httprequestresponse_logging_middleware_example": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
